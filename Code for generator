@@ -1,0 +1,17 @@
+def generate_weather_sentence(weather, mood):
+    if weather.lower() == 'sunny' and mood.lower() == 'happy':
+        sentence = "It's a sunny day, and you're feeling happy!"
+    elif weather.lower() == 'rainy' and mood.lower() == 'relaxed':
+        sentence = "It's raining outside, perfect for a relaxed mood."
+    else:
+        sentence = "The weather is {} and you're feeling {}.".format(weather, mood)
+    
+    return sentence
+
+# Example usage
+weather = input("Enter the current weather (sunny/rainy): ")
+mood = input("Enter your mood (happy/relaxed): ")
+
+# Generate and print the sentence
+result = generate_weather_sentence(weather, mood)
+print(result)
